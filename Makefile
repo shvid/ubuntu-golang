@@ -23,4 +23,5 @@ run: build
 
 push: build
 	docker push ${REGISTRY}/${IMAGE}:${VERSION}
-	docker tag ${REGISTRY}/${IMAGE}:latest ${REGISTRY}/${IMAGE}:${VERSION}
+	docker tag ${REGISTRY}/${IMAGE}:${VERSION} ${REGISTRY}/${IMAGE}:latest
+	docker push ${REGISTRY}/${IMAGE}:latest

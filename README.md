@@ -5,7 +5,7 @@ Docker container for Ubuntu with Golang
 ### Docker image
 
 ```
-docker run shvid/ubuntu-golang:1.12.2-81896c7 go version
+docker run shvid/ubuntu-golang go version
 ```
 
 ### Build
