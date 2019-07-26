@@ -5,7 +5,7 @@
 #
 #
 
-GO_VER := 1.12.2
+GO_VER := 1.12.7
 IMAGE := ubuntu-golang
 VERSION := $(GO_VER)-$(shell git describe --tags --always --dirty)
 REGISTRY := shvid
