@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 MAINTAINER Alex Shvid <alex@shvid.com>
 ARG GO_VER
 
-RUN apt-get update && apt-get install -y git locales wget && \
+RUN apt-get update && apt-get install -y git locales wget build-essential && \
     localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 ENV LANG en_US.utf8
 
@@ -71,8 +71,6 @@ RUN go get \
   golang.org/x/net/xsrftoken \
   golang.org/x/sys/cpu \
   golang.org/x/sys/unix \
-  golang.org/x/sys/windows \
-  golang.org/x/sys/windows/registry \
   golang.org/x/text/cases \
   golang.org/x/text/cmd/gotext \
   golang.org/x/text/collate \
