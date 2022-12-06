@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y git locales wget build-essential && \
 ENV LANG en_US.utf8
 
 RUN echo "Download GoLang" && \
-    wget -q https://dl.google.com/go/go${GO_VER}.linux-amd64.tar.gz && \
+    wget -q https://go.dev/dl/go${GO_VER}.linux-amd64.tar.gz && \
     tar -C /usr/local -xzf go${GO_VER}.linux-amd64.tar.gz && \
     rm go${GO_VER}.linux-amd64.tar.gz
 
